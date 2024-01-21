@@ -10,7 +10,7 @@ class script(object):
 ★ Language: <a href=https://www.python.org>Python</a>
 ★ Library: <a href=https://pyrogram.org>Pyrogram</a>"""
 
-    MY_OWNER_TXT = """★ Name: HA Bots
+    MY_OWNER_TXT = """★ Name: VegamovieszBot
 ★ Editor: <a href=https://t.me/rohan89274>Rohan karanje</a>
 ★ Country: India """
 
