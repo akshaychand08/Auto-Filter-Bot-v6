@@ -495,3 +495,38 @@ async def ping(client, message):
     msg = await message.reply("👀")
     end_time = time.monotonic()
     await msg.edit(f'{round((end_time - start_time) * 1000)} ms')
+
+########################################
+@Client.on_message(filters.command("verify") & filters.user(ADMINS))
+async def verifying_vip(client, message):
+    try:
+        msg = message.text
+        vipsid = message.command[1]
+        timd = message.command[2]
+        
+        if timd not in ('1', '7', '30', '90', '180', '365', '1000'):
+            raise ValueError("Invalid Plan!")
+
+        type_map = {'1': "Free", '7': "Basics", '30': "Standard", '90': "Elite", '180': "Premium", '365': "Premium", '1000': "Ultimate"}
+        type = type_map[timd]
+
+        plan = int(timd)
+
+        if vipsid and vipsid.isdigit() and len(vipsid) in (9, 10):
+            await verify_VIP(client, vipsid, plan)
+            username = await db.get_username_by_id(vipsid)
+
+            s_m = any(admin == int(vipsid) for admin in ADMINS)
+
+            msg = f"<b>{type} Plan Activated!</b>\n\n<b>Name : </b>{username}\n<b>User id :</b> {vipsid}\n<b>Verified For:</b> {timd} Days \n\n<i>for more info use /plan command in bot ☞ @VegaMoviesXbot</i>"
+            
+            await message.reply(msg)
+
+            vipsid = int(vipsid)
+            if not s_m:
+                await client.send_message(vipsid, msg)
+        else:
+            raise ValueError("Invalid command!")
+
+    except Exception as e:
+        await message.reply(f"{str(e)}")
