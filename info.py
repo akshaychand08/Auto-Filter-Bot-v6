@@ -34,7 +34,7 @@ if len(BOT_TOKEN) == 0:
 PORT = int(environ.get('PORT', '80'))
 
 # Bot pics
-PICS = (environ.get('PICS', 'https://telegra.ph/file/58fef5cb458d5b29b0186.jpg https://telegra.ph/file/f0aa4f433132769f8970c.jpg https://telegra.ph/file/f515fbc2084592eca60a5.jpg https://telegra.ph/file/20dbdcffaa89bd3d09a74.jpg https://telegra.ph/file/6045ba953af4def846238.jpg')).split()
+PICS = (environ.get('PICS', 'https://te.legra.ph/file/169d734e703d77c938ddf.jpg')).split()
 
 # Bot Admins
 ADMINS = environ.get('ADMINS', '6343583875')
@@ -48,7 +48,7 @@ else:
 INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '-1002025950344').split()]
 if len(INDEX_CHANNELS) == 0:
     print('Info - INDEX_CHANNELS is empty')
-AUTH_CHANNEL = [int(auth_channels) for auth_channels in environ.get('AUTH_CHANNEL', '').split()]
+AUTH_CHANNEL = [int(auth_channels) for auth_channels in environ.get('AUTH_CHANNEL', '-1002015182571').split()]
 if len(AUTH_CHANNEL) == 0:
     print('Info - AUTH_CHANNEL is empty')
 LOG_CHANNEL = environ.get('LOG_CHANNEL', '-1002039398449')
@@ -80,7 +80,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'AniDb')
 
 # Links
-SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/+kGw8CPKaenM1Y2Nl')
+SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/+mQPCLsc7IodlMjhl')
 UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/+H1MrYFzBzD0zNmU9')
 FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/+mQPCLsc7IodlMjhl')
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/+H1MrYFzBzD0zNmU9")
