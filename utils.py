@@ -235,4 +235,11 @@ def get_wish():
     else:
         status = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌘"
     return status
-
+    
+async def verify_VIP(bot, userid,plan):
+    userid1 = int(userid)
+    tz = pytz.timezone('Asia/Kolkata')
+    date_var = datetime.now(tz)+timedelta(days=int(plan))
+    temp_time = date_var.strftime("%H:%M:%S")
+    date_var, time_var = str(date_var).split(" ")
+    await update_verify_status(userid1, date_var, temp_time)
