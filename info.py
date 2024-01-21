@@ -89,13 +89,13 @@ VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/Vegamovies_offica
 # Bot settings
 DELETE_TIME = int(environ.get('DELETE_TIME', 1800)) # Add time in seconds
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
-MAX_BTN = int(environ.get('MAX_BTN', 10))
+MAX_BTN = int(environ.get('MAX_BTN', 15))
 LANGUAGES = [language.lower() for language in environ.get('LANGUAGES', 'english hindi telugu tamil kannada malayalam').split()]
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", script.IMDB_TEMPLATE)
 FILE_CAPTION = environ.get("FILE_CAPTION", script.FILE_CAPTION)
 SHORTLINK_URL = environ.get("SHORTLINK_URL", "ez4short.com")
 SHORTLINK_API = environ.get("SHORTLINK_API", "41149ef8d5696ea7318485ba39b9224f52b7bdd8")
-VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 1440)) # Add time in seconds
+VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 WELCOME_TEXT = environ.get("WELCOME_TEXT", script.WELCOME_TEXT)
 INDEX_EXTENSIONS = [extensions.lower() for extensions in environ.get('INDEX_EXTENSIONS', 'mp4 mkv').split()]
 
