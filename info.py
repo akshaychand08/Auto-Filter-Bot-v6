@@ -80,29 +80,29 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'AniDb')
 
 # Links
-SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/HA_Bots_Support')
-UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/HA_Bots')
-FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/HA_Films_World')
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/HA_Bots")
-VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/HA_Bots")
+SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/+kGw8CPKaenM1Y2Nl')
+UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/+H1MrYFzBzD0zNmU9')
+FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/+mQPCLsc7IodlMjhl')
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/+H1MrYFzBzD0zNmU9")
+VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/Vegamovies_officalx")
 
 # Bot settings
-DELETE_TIME = int(environ.get('DELETE_TIME', 3600)) # Add time in seconds
+DELETE_TIME = int(environ.get('DELETE_TIME', 1800)) # Add time in seconds
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
-MAX_BTN = int(environ.get('MAX_BTN', 15))
+MAX_BTN = int(environ.get('MAX_BTN', 20))
 LANGUAGES = [language.lower() for language in environ.get('LANGUAGES', 'english hindi telugu tamil kannada malayalam').split()]
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", script.IMDB_TEMPLATE)
 FILE_CAPTION = environ.get("FILE_CAPTION", script.FILE_CAPTION)
-SHORTLINK_URL = environ.get("SHORTLINK_URL", "mdiskshortner.link")
-SHORTLINK_API = environ.get("SHORTLINK_API", "36f1ae74ba1aa01e5bd73bdd0bc22aa915443501")
-VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
+SHORTLINK_URL = environ.get("SHORTLINK_URL", "ez4short.com")
+SHORTLINK_API = environ.get("SHORTLINK_API", "41149ef8d5696ea7318485ba39b9224f52b7bdd8")
+VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 1440)) # Add time in seconds
 WELCOME_TEXT = environ.get("WELCOME_TEXT", script.WELCOME_TEXT)
 INDEX_EXTENSIONS = [extensions.lower() for extensions in environ.get('INDEX_EXTENSIONS', 'mp4 mkv').split()]
 
 # boolean settings
-IS_VERIFY = is_enabled('IS_VERIFY', False)
-AUTO_DELETE = is_enabled('AUTO_DELETE', False)
-WELCOME = is_enabled('WELCOME', False)
+IS_VERIFY = is_enabled('IS_VERIFY', True)
+AUTO_DELETE = is_enabled('AUTO_DELETE', True)
+WELCOME = is_enabled('WELCOME', True)
 PROTECT_CONTENT = is_enabled('PROTECT_CONTENT', False)
 LONG_IMDB_DESCRIPTION = is_enabled("LONG_IMDB_DESCRIPTION", False)
 LINK_MODE = is_enabled("LINK_MODE", True)
